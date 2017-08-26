@@ -1,0 +1,2 @@
+var tags = ["login", "data-driven", "registered-user", "successful"]
+var specs = [{"path":"specs/login_data_driven.html","name":"Login Specification - Data Driven","scenarios":[{"name":"Registered users login to the system","tags":["registered-user","successful","login","data-driven"]}]},{"path":"specs/login_simple.html","name":"Login Specification","scenarios":[{"name":"Registered user login to the system","tags":["registered-user","successful","login"]}]}]
