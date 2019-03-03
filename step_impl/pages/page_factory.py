@@ -20,7 +20,10 @@ class PageFactory:
 def init():
     chrome_options = Options()  
     chrome_options.add_argument("--headless")  
-    chrome_options.binary_location = '/usr/bin/chromium-browser'  
+    chrome_options.binary_location = '/usr/bin/chromium-browser' 
+    print("-------------------------------")
+    print(os.path.abspath("chromedriver")) 
+    print("-------------------------------")
     PageFactory.driver = webdriver.Chrome(executable_path=os.path.abspath("chromedriver"),   chrome_options=chrome_options)
 
     PageFactory.driver = webdriver.Chrome()
