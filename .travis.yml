@@ -19,5 +19,5 @@ script:
   - gauge install python -v 0.2.3
   - gauge telemetry off
   - gauge -v
-  - gauge run specs/
+  - gauge run -p specs/
 
