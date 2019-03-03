@@ -1,5 +1,8 @@
 from getgauge.python import before_suite, after_suite
 from selenium import webdriver
+import os  
+from selenium.webdriver.chrome.options import Options  
+
 
 from step_impl.pages.login_page import LoginPage
 from step_impl.pages.logout_page import LogoutPage
@@ -15,6 +18,11 @@ class PageFactory:
     
 @before_suite
 def init():
+    chrome_options = Options()  
+    chrome_options.add_argument("--headless")  
+    chrome_options.binary_location = '/usr/bin/chromium-browser'  
+    PageFactory.driver = webdriver.Chrome(executable_path=os.path.abspath("chromedriver"),   chrome_options=chrome_options)
+
     PageFactory.driver = webdriver.Chrome()
     PageFactory.login_page = LoginPage(PageFactory.driver)   
     PageFactory.logout_page = LogoutPage(PageFactory.driver)
@@ -24,3 +32,4 @@ def init():
 @after_suite
 def close():
     PageFactory.driver.close()
+    PageFactory.driver.quit()

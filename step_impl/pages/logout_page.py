@@ -13,5 +13,5 @@ class LogoutPage(BasePage):
     """Logout page actions """
     def visit(self):
         self.driver.get(self.URL)
-        self.driver.maximize_window()
+        #self.driver.maximize_window()
         
