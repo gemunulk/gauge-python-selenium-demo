@@ -20,7 +20,12 @@ class PageFactory:
 def init():
     chrome_options = Options()  
     chrome_options.add_argument("--headless")  
-    
+    #All the arguments added for chromium to work on selenium
+    chrome_options.add_argument("--no-sandbox") #This make Chromium reachable
+    chrome_options.add_argument("--no-default-browser-check") #Overrides default choices
+    chrome_options.add_argument("--no-first-run")
+    chrome_options.add_argument("--disable-default-apps") 
+
     if platform.system() == 'Darwin':
         chrome_options.binary_location = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' 
         path_to_chromedriver_binary = '/Users/gemunu/Documents/WebDriver/chromedriver'    

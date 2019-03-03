@@ -1,15 +1,23 @@
+sudo: required
 dist: trusty
-addons: # get google-chrome-stable (stable or beta)
-  chrome: beta
-before_install:
-  - # start your web application and listen on `localhost`
-  - google-chrome-beta --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+
 
 before_script:
   - sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 023EDB0B
   - echo deb https://dl.bintray.com/gauge/gauge-deb nightly main | sudo tee -a /etc/apt/sources.list
   - sudo apt-get update
   - sudo apt-get install gauge
+  - export CHROME_BIN=chromium-browser 
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sleep 3
+
 
 
 language: python
