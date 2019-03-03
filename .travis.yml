@@ -1,0 +1,19 @@
+before_script:
+  - sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 023EDB0B
+  - echo deb https://dl.bintray.com/gauge/gauge-deb nightly main | sudo tee -a /etc/apt/sources.list
+  - sudo apt-get update
+  - sudo apt-get install gauge
+
+
+language: python
+python:
+  - "3.6.5"
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+# command to run tests
+script:
+  - gauge install python -v 0.2.3
+  - gauge -v
+  - gauge run specs/
+
