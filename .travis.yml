@@ -3,6 +3,9 @@ before_script:
   - echo deb https://dl.bintray.com/gauge/gauge-deb nightly main | sudo tee -a /etc/apt/sources.list
   - sudo apt-get update
   - sudo apt-get install gauge
+  - wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.6.5/bin/
+  - export CHROME_BIN=chromium-browser
 
 
 language: python
