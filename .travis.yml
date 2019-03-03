@@ -1,3 +1,6 @@
+addons: # get google-chrome-stable
+  chrome: stable
+
 before_script:
   - sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 023EDB0B
   - echo deb https://dl.bintray.com/gauge/gauge-deb nightly main | sudo tee -a /etc/apt/sources.list
@@ -5,6 +8,7 @@ before_script:
   - sudo apt-get install gauge
   - wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.6.5/bin/
+  - sudo chmod +x /home/travis/virtualenv/python3.6.5/bin/chromedriver
   - export CHROME_BIN=chromium-browser
   - echo $PATH 
 
