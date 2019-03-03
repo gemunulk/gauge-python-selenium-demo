@@ -33,7 +33,7 @@ def init():
     elif platform.system() == 'Windows':
         pass
     else:   
-        chrome_options.binary_location = '/usr/bin/chromium-browser' 
+        chrome_options.binary_location = '/usr/bin/google-chrome-stable' 
         path_to_chromedriver_binary = '/home/travis/virtualenv/python3.6.5/bin/chromedriver'
     
     #PageFactory.driver = webdriver.Chrome()
