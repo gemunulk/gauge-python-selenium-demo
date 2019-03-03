@@ -1,4 +1,4 @@
-# gauge-python-selenium-demo project
+# gauge-python-selenium-demo project [![Build Status](https://travis-ci.org/gemunulk/gauge-python-selenium-demo.svg?branch=master)](https://travis-ci.org/gemunulk/gauge-python-selenium-demo)
 
 This is an example project, illustrating how to do test automation using [Gauge](https://github.com/getgauge/gauge) test automation framework, with python support.
 
