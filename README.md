@@ -39,6 +39,12 @@ This project requires pip to install dependencies. To install dependencies run :
 pip3 install -r requirements.txt
 ````
 
+### Propertes
+On Windows: Please updated the env/default/python.properties as bellow.
+````
+GAUGE_PYTHON_COMMAND = python
+````
+
 ### All specs
 ````
 gauge run specs

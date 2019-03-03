@@ -12,7 +12,7 @@ class LoginPageLocators:
 
 
 class LoginPage(BasePage):
-    URL = '{}/mercurysignon.php'.format(BasePage.MAIN_URL)
+    URL = '{}mercurysignon.php'.format(BasePage.MAIN_URL)
     
     """Login page actions """
     def visit(self):
