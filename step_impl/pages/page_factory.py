@@ -24,7 +24,7 @@ def init():
     print("-------------------------------")
     print(os.path.abspath("chromedriver")) 
     print("-------------------------------")
-    PageFactory.driver = webdriver.Chrome(executable_path=os.path.abspath("chromedriver"),   chrome_options=chrome_options)
+    PageFactory.driver = webdriver.Chrome(executable_path='/home/travis/virtualenv/python3.6.5/bin/',   chrome_options=chrome_options)
 
     PageFactory.driver = webdriver.Chrome()
     PageFactory.login_page = LoginPage(PageFactory.driver)   
