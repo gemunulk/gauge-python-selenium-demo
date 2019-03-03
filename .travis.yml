@@ -6,6 +6,7 @@ before_script:
   - wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.6.5/bin/
   - export CHROME_BIN=chromium-browser
+  - echo $PATH 
 
 
 language: python
