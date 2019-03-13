@@ -1,4 +1,4 @@
-# gauge-python-selenium-demo project [![Build Status](https://travis-ci.org/gemunulk/gauge-python-selenium-demo.svg?branch=master)](https://travis-ci.org/gemunulk/gauge-python-selenium-demo)
+# gauge-python-selenium-demo project [![Build Status](https://travis-ci.org/gemunulk/gauge-python-selenium-demo.svg?branch=master)](https://travis-ci.org/gemunulk/gauge-python-selenium-demo) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gemunulk_gauge-python-selenium-demo&metric=alert_status)](https://sonarcloud.io/dashboard?id=gemunulk_gauge-python-selenium-demo)
 
 This is an example project, illustrating how to do test automation using [Gauge](https://github.com/getgauge/gauge) test automation framework, with python support.
 
